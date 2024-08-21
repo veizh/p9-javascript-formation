@@ -40,7 +40,6 @@ export default class {
             try {
               let test = new Date(doc.date)
               return {
-
                 ...doc,
                 date: formatDate(doc.date),
                 status: formatStatus(doc.status),
@@ -58,8 +57,6 @@ export default class {
               }
             }
           })
-          console.log('length', bills.length)
-          console.log(bills[0].date)
           function compareMoment(a, b) {
             if (a.timeStamp < b.timeStamp) return 1;
             if (a.timeStamp > b.timeStamp) return -1;
